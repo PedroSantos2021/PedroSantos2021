@@ -1,0 +1,49 @@
+<!doctype html>
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet", href="/css/tailwind.css")
+        link(rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-icons.min.css")
+        title #{titulo_pestaña}
+    body
+        div(class="bg-gray-800 text-gray-100 flex")
+            button(class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700")
+                svg(class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
+                    path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16")
+            a(href="#" class="block p-4 text-white font-bold") #{titulo_vista}
+            .flex-grow
+            button(class="mobile-menu-button focus:outline-none focus:bg-gray-700 px-4")
+                span(class="mif-more-vert text-2xl")
+        div(class="relative min-h-screen md:flex")
+            aside(class="relative md:flex")
+                div(class="sidebar bg-gradient-to-r from-gray-500 to-gray-600 text-gray-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out")
+                    a(href="#" class="sidebar__title-link")
+                        span(class="text-white flex items-center space-x-2 px-4") Informatica
+                    nav(class="sidebar__nav")
+                        a( href="#" class="sidebar__nav-link hover:text-gray-600")
+                            span(class="mif-dashboard text-xl")
+                            span(class="ml-2") Dashboard
+                        a( href="#" class="sidebar__nav-link hover:text-gray-600")
+                            span(class="mif-inbox text-xl")
+                            span(class="ml-2") Bandeja
+                        a( href="#" class="sidebar__nav-link hover:text-gray-600")
+                            span(class="mif-laptop text-xl")
+                            span(class="ml-2") Equipos
+                        a( href="/usuarios" class="sidebar__nav-link hover:text-gray-600")
+                            span(class="mif-users text-xl")
+                            span(class="ml-2") Usuarios
+                        a( href="#" class="sidebar__nav-link hover:text-gray-600")
+                            span(class="mif-cogs text-xl")
+                            span(class="ml-2") Configuraciones
+                        a( href="#" class="sidebar__nav-link hover:text-gray-600")
+                            span(class="mif-exit text-xl")
+                            span(class="ml-2") Cerrar Sesion
+            section(class="flex-1 p-1 font-bold")
+                block contenido
+
+        footer(class="text-center h-12 text bg-gray-200 flex justify-center self-center")
+            span.self-center Development by 
+                strong Pedro Ernesto santos Diaz 2020
+        script(src="/js/mobile-menu.js" type="text/javascript")

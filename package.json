@@ -1,0 +1,22 @@
+{
+  "name": "sst",
+  "version": "1.0.0",
+  "description": "Sistema de soporte tecnico",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "buildcss": "npx tailwindcss -i ./css/tailwind.css -o ./public/css/tailwind.css"
+  },
+  "author": "Pedro Ernesto Santos Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "nodemon": "^2.0.13",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16"
+  }
+}
